@@ -38,9 +38,9 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public List<UserDTO> getAllUsers() {
 		List<User> users = userRepository.findAllByOrderByUsernameAsc();
-		if (users.isEmpty()) {
-			throw new ResourceNotFoundException("No users found.");
-		}
+		// if (users.isEmpty()) {
+		// 	throw new ResourceNotFoundException("No users found.");
+		// }
 
 		return users.stream().map(user -> {
 			UserDTO userDTO = new UserDTO();
