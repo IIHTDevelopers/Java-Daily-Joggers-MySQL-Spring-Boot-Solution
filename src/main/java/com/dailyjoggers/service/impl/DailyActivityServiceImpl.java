@@ -50,9 +50,9 @@ public class DailyActivityServiceImpl implements DailyActivityService {
 	@Override
 	public List<DailyActivityDTO> getDailyActivityForUser(Long userId) {
 		List<DailyActivity> dailyActivities = dailyActivityRepository.findByUserId(userId);
-		if (dailyActivities.isEmpty()) {
-			throw new ResourceNotFoundException("No daily activity found.");
-		}
+		// if (dailyActivities.isEmpty()) {
+		// 	throw new ResourceNotFoundException("No daily activity found.");
+		// }
 
 		return dailyActivities.stream().map(dailyActivity -> {
 			DailyActivityDTO dailyActivityDTO = new DailyActivityDTO();
