@@ -43,7 +43,7 @@ public class QAProfileEndpointControllerTest {
 	}
 
 	@Test
-	public void testGetProfile() throws Exception {
+	public void testGetQAProfile() throws Exception {
 		String expectedProfileData = "This is qa profile";
 		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api/users/profile").accept(MediaType.TEXT_PLAIN);
 		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
